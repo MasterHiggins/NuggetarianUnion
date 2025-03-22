@@ -79,3 +79,64 @@ button:hover {
     align-items: center;
     justify-content: space-evenly;
 }
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        font-size: 20pt;
+        padding: 2%;
+    }
+
+    header img {
+        width: 15%;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 30pt;
+    }
+
+    p {
+        font-size: 16pt;
+        padding: 0 5%;
+    }
+
+    .button-section button {
+        width: 90%;
+        font-size: 16pt;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        font-size: 12pt;
+    }
+
+    .footer-column {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header img {
+        width: 20%;
+    }
+
+    h1 {
+        font-size: 24pt;
+    }
+
+    p {
+        font-size: 14pt;
+    }
+
+    .button-section button {
+        font-size: 14pt;
+    }
+
+    footer {
+        font-size: 10pt;
+    }
+}
