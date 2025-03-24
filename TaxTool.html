@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuggetarian Union</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/Flag.png" type="image/png">
+    <script src="taxes.js" defer></script>
+</head>
+
+<header>
+    <img src="assets/Flag.png" width = "8%" height = "auto" style = "padding-right: 1%;"> 
+    <div>The Nuggetarian Union</div>
+</header>
+
+<body>
+    <h1 style = "text-align: center;">Tax Tool</h1>
+
+    <p>
+        This tool is a way to calculate the total amount you owe in tax.
+    </p>
+
+    <p>
+        If you are a individual using this tool, then you will only need the individual and income tax field filled out to easily determine how much
+        you owe. If you are a business, then you will only need the business and sales tax fields filled out. If you are an individual who also owns
+        a business, then all fields need to be filled out to accurately determine what you owe/are owed.
+    </p>
+
+    <p>
+        For the sales tax form, please fill out what you owe in sales tax before adding the sales tax rate. for example, if the sales tax is 10% and 
+        you made 100 Iron in sales, then enter 100 and not 10. This way, the tool will account for the tax you have already collected.
+    </p>
+
+    <p>
+        If you are subject to alternate taxation, then check the box to adjust the rate alternatively.
+    </p>
+
+    <b>
+        <p>
+            Please note all taxes are due on election day.
+        </p>
+    </b>
+
+    <div class = "tax-tool">
+        <label for = "individual-tax">Individual Tax:</label>
+        <input type = "number" id = "individual-tax" value = "0" min = "0"><br>
+
+        <label for = "business-tax">Business Tax:</label>
+        <input type = "number" id = "business-tax" value = "0" min = "0"><br>
+
+        <label for = "sales-tax">Sales Tax:</label>
+        <input type = "number" id="sales-tax" value = "0" min = "0"><br>
+
+        <label for = "income-tax">Income Tax:</label>
+        <input type = "number" id = "income-tax" value = "0" min = "0"><br>
+
+        <label for="adjust-rate">
+            <input type = "checkbox" id = "adjust-rate"> Adjust to Alternate Rate (Joined before April 3rd, 2025)
+        </label><br>
+        
+        <div class="button-section">
+            <button onclick="calculateTax()">Calculate Total Tax</button>
+        </div>
+
+        <h2 style="font-size: 30pt;">Total Tax: <span id="total-tax">0</span></h2>
+
+        <div id="tax-breakdown" style="font-size: 18pt; text-align: center;">
+        </div>
+
+        <p>
+            <b>
+                If your total is less than 0, then the government owes you that amount
+            </b>
+        </p>
+
+        <p style = "font-size: 12pt;">
+            When using this tool, please exclude anything taxed previously, as the government will not take that into account, and only tax new
+            income. Individual/Business Tax is a rate that taxes anything that came in over the term before the election. Sales Tax is something 
+            a business might charge you at the register so they do not have to cover the tax. Income Tax is a tax you may encounter when you get 
+            a paycheque. An employer may take this out of your paycheque, but either way, enter the amount you earned rather than the amount you
+            recieved, then check with the payer to confirm if they paid the tax on your behalf.
+        </p>
+
+        <p style = "font-size: 12pt;">
+            Please note that this tool is not meant as an absolute way to determine taxes. Agents have the right to write off whcihever amount they
+            feel is fair, and this tool is only meant to have a general estimate. The government will consult the records that it has when trying
+            to determine the new amount to tax. If you lost Iron, then they will not be entering the amount you lost, and may only tax one or two
+            of the fields you entered. Ultimately, this is the same tool they will use, except they have more information and powers to work with.
+            For more tax information for the Nuggetarian Union, click <a href = "TaxInfo.html">here</a>.
+        </p>
+    </div>
+</body>
+
+<footer>
+    <div class="footer-column">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="CommonInformation.html">Common Info</a>
+    </div>
+    <div class="footer-column">
+        <a href="Comittee.html">Comittee Members</a>
+        <a href="Announcements.html">Announcements</a>
+    </div>
+</footer>
+
+</html>
