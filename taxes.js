@@ -13,8 +13,8 @@ const ALTERNATE_RATE_INCOME = 0.02;
 const ALTERNATE_CREDIT = -75;
 
 //Top Tax threshold and rate
-const TOP_TAX_THRESHOLD = 5000;
-const TOP_TAX_RATE = 0.05;
+const TOP_TAX_THRESHOLD = 3000;
+const TOP_TAX_RATE = 0.1;
 
 function calculateTax() {
     const individualTax = parseFloat(document.getElementById("individual-tax").value) || 0;
