@@ -56,7 +56,6 @@ function calculateTax() {
         <p>Total Tax Owing/Owed: ${Math.round(totalTax.toFixed(2))}</p>
     `;
 
-    // Generate ReferenceNumber
     const referenceNumber = btoa(
         `${individualTax}-${businessTax}-${salesTax}-${incomeTax}-${useAlternateRate}`
     );
