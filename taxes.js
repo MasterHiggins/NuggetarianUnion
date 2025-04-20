@@ -55,5 +55,15 @@ function calculateTax() {
         <p>Total Tax Before Rounding: ${totalTax.toFixed(2)}</p>
         <p>Total Tax Owing/Owed: ${Math.round(totalTax.toFixed(2))}</p>
     `;
-    document.getElementById("tax-breakdown").innerHTML = breakdown;
+
+    // Generate ReferenceNumber
+    const referenceNumber = btoa(
+        `${individualTax}-${businessTax}-${salesTax}-${incomeTax}-${useAlternateRate}`
+    );
+
+    const referenceSection = `
+        <p><b>Reference Number:</b> ${referenceNumber}</p>
+    `;
+
+    document.getElementById("tax-breakdown").innerHTML = breakdown + referenceSection;
 }
