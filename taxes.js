@@ -1,20 +1,20 @@
 //Constants for tax rates - standard
 const STANDARD_RATE_BUSINESS = 0.07;
 const STANDARD_RATE_INDIVIDUAL = 0.05;
-const STANDARD_RATE_SALES = 0.04;
+const STANDARD_RATE_SALES = 0;
 const STANDARD_RATE_INCOME = 0.04;
-const STANDARD_CREDIT = -75;
+const STANDARD_CREDIT = -25;
 
 //Constants for tax rates - alternate
-const ALTERNATE_RATE_BUSINESS = 0.035;
-const ALTERNATE_RATE_INDIVIDUAL = 0.025;
-const ALTERNATE_RATE_SALES = 0.02;
-const ALTERNATE_RATE_INCOME = 0.02;
-const ALTERNATE_CREDIT = -75;
+const ALTERNATE_RATE_BUSINESS = 0.14;
+const ALTERNATE_RATE_INDIVIDUAL = 0.1;
+const ALTERNATE_RATE_SALES = 0;
+const ALTERNATE_RATE_INCOME = 0.08;
+const ALTERNATE_CREDIT = -12.5;
 
 //Top Tax threshold and rate
-const TOP_TAX_THRESHOLD = 3000;
-const TOP_TAX_RATE = 0.1;
+const TOP_TAX_THRESHOLD = 1750;
+const TOP_TAX_RATE = 0.15;
 
 function calculateTax() {
     const individualTax = parseFloat(document.getElementById("individual-tax").value) || 0;
